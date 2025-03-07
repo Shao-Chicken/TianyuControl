@@ -1,0 +1,71 @@
+default_api_base_url: "http://localhost:5555"
+client_id: 123
+transaction_id: 1234
+log_file: "app.log"
+
+devices:
+  telescope:
+    enabled: true
+    api_url: "http://202.127.24.217:11111"
+    endpoints:
+      - rightascension
+      - declination
+      - altitude
+      - azimuth
+      - alignmentmode
+      - aperturediameter
+      - athome
+      - atpark
+      - doesrefraction
+      - ispulseguiding
+      - siteelevation
+      - sitelatitude
+      - sitelongitude
+      - slewing
+      - tracking
+      - trackingrate
+      - utcdate
+  
+  focuser:
+    enabled: true
+    api_url: "http://202.127.24.217:11111"
+    endpoints:
+      - absolute
+      - ismoving
+      - maxincrement
+      - maxstep
+      - position
+      - stepsize
+      #- tempcomp
+      #- tempcompavailable
+      #- temperature
+  
+  rotator:
+    enabled: true
+    api_url: "http://202.127.24.217:11111"
+    endpoints:
+      #- canreverse
+      - ismoving
+      #- mechanicalposition
+      - position
+      - reverse
+      - stepsize
+      - targetposition
+
+  ObservingConditions:
+    enabled: true
+    api_url: "http://202.127.24.217:11111"
+    endpoints:
+      - cloudcover
+      - dewpoint
+      - humidity
+      - pressure
+      - skybrightness
+      - rainrate
+      - skyquality
+      - skytemperature
+      - starfwhm
+      - temperature
+      - winddirection
+      - windgust
+      - windspeed
