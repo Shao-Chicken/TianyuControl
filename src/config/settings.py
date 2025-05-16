@@ -51,15 +51,15 @@ FONT_SIZES = {
 
 # 布局配置
 LAYOUT_CONFIG = {
-    'window_margin': 15,           # 窗口边距
-    'content_spacing': 15,         # 主要内容间距
-    'group_margin': 12,            # 组件内边距
-    'group_spacing': 8,            # 组件内元素间距
-    'button_padding': 8,           # 按钮内边距
-    'label_spacing': 6,            # 标签间距
-    'section_spacing': 12,         # 分区间距
-    'header_margin': 8,            # 顶部按钮区域边距
-    'widget_spacing': 4            # 小部件间距
+    'window_margin': 20,           # 窗口边距
+    'content_spacing': 20,         # 主要内容间距
+    'group_margin': 15,            # 组件内边距
+    'group_spacing': 12,           # 组件内元素间距
+    'button_padding': 10,          # 按钮内边距
+    'label_spacing': 8,            # 标签间距
+    'section_spacing': 18,         # 分区间距
+    'header_margin': 10,           # 顶部按钮区域边距
+    'widget_spacing': 8            # 小部件间距
 }
 
 # 串口配置

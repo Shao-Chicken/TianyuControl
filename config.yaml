@@ -1,71 +1,113 @@
-default_api_base_url: "http://localhost:5555"
-client_id: 123
-transaction_id: 1234
-log_file: "app.log"
-
-devices:
-  telescope:
-    enabled: true
-    api_url: "http://202.127.24.217:11111"
-    endpoints:
-      - rightascension
-      - declination
-      - altitude
-      - azimuth
-      - alignmentmode
-      - aperturediameter
-      - athome
-      - atpark
-      - doesrefraction
-      - ispulseguiding
-      - siteelevation
-      - sitelatitude
-      - sitelongitude
-      - slewing
-      - tracking
-      - trackingrate
-      - utcdate
-  
-  focuser:
-    enabled: true
-    api_url: "http://202.127.24.217:11111"
-    endpoints:
-      - absolute
-      - ismoving
-      - maxincrement
-      - maxstep
-      - position
-      - stepsize
-      #- tempcomp
-      #- tempcompavailable
-      #- temperature
-  
-  rotator:
-    enabled: true
-    api_url: "http://202.127.24.217:11111"
-    endpoints:
-      #- canreverse
-      - ismoving
-      #- mechanicalposition
-      - position
-      - reverse
-      - stepsize
-      - targetposition
-
-  ObservingConditions:
-    enabled: true
-    api_url: "http://202.127.24.217:11111"
-    endpoints:
-      - cloudcover
-      - dewpoint
-      - humidity
-      - pressure
-      - skybrightness
-      - rainrate
-      - skyquality
-      - skytemperature
-      - starfwhm
-      - temperature
-      - winddirection
-      - windgust
-      - windspeed
+{
+    "default_api_base_url": "http://localhost:5555",
+    "client_id": 123,
+    "transaction_id": 1234,
+    "log_file": "app.log",
+    "devices": {
+        "telescope": {
+            "enabled": true,
+            "api_url": "http://202.127.24.217:11111",
+            "endpoints": [
+                "rightascension",
+                "declination",
+                "altitude",
+                "azimuth",
+                "alignmentmode",
+                "aperturediameter",
+                "athome",
+                "atpark",
+                "doesrefraction",
+                "ispulseguiding",
+                "siteelevation",
+                "sitelatitude",
+                "sitelongitude",
+                "slewing",
+                "tracking",
+                "trackingrate",
+                "utcdate"
+            ]
+        },
+        "focuser": {
+            "enabled": true,
+            "api_url": "http://202.127.24.217:11111",
+            "endpoints": [
+                "absolute",
+                "ismoving",
+                "maxincrement",
+                "maxstep",
+                "position",
+                "stepsize"
+            ]
+        },
+        "rotator": {
+            "enabled": true,
+            "api_url": "http://202.127.24.217:11111",
+            "endpoints": [
+                "ismoving",
+                "position",
+                "reverse",
+                "stepsize",
+                "targetposition"
+            ]
+        },
+        "ObservingConditions": {
+            "enabled": true,
+            "api_url": "http://202.127.24.217:11111",
+            "endpoints": [
+                "cloudcover",
+                "dewpoint",
+                "humidity",
+                "pressure",
+                "skybrightness",
+                "rainrate",
+                "skyquality",
+                "skytemperature",
+                "starfwhm",
+                "temperature",
+                "winddirection",
+                "windgust",
+                "windspeed"
+            ]
+        },
+        "dome": {
+            "enabled": true,
+            "api_url": "http://202.127.24.217:11111",
+            "endpoints": [
+                "azimuth",
+                "athome",
+                "atpark",
+                "slewing",
+                "shutter_status"
+            ]
+        },
+        "covercalibrator": {
+            "enabled": true,
+            "api_url": "http://202.127.24.217:11111",
+            "endpoints": [
+                "coverstate",
+                "calibratorstate"
+            ]
+        },
+        "cooler": {
+            "enabled": true,
+            "api_url": "serial",
+            "endpoints": [
+                "temperature",
+                "status_bits"
+            ],
+            "port": "COM20",
+            "baudrate": 4800,
+            "bytesize": 8,
+            "parity": "N",
+            "stopbits": 2,
+            "timeout": 1
+        },
+        "allsky_camera": {
+            "enabled": true,
+            "image_path": "D:\\software_sq\\astro\\TianyuControl-main\\test_allsky_pic",
+            "image_name": "test001",
+            "image_extension": ".png",
+            "refresh_interval": 5
+        }
+    }
+}
